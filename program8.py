@@ -1,8 +1,7 @@
-sample_dict = {'a': 100,'b': 200,'c': 300}
-#if 200 in sample_dict.values():
- #   print("200 present in a dict")
-
-
-for k,v in sample_dict.items():
-    if v==200:
-        print("for",v,"key is",k)
+set1 ={10,20,30}
+set2 ={20,40,50}
+if set1.isdisjoint(set2):
+    print("Two sets have no items in common")
+else:
+    print("Two sets have items in common")
+    print(set1.intersection(set2))

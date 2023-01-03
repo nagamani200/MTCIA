@@ -1,9 +1,19 @@
-months={1:'January',2:'Febryary',3:'March',4:'April',5:'May',
-        6:'June',7:'July',8:'August',9:'september',10:'October',11:'November',12:'December',}
-n=int(input())
-for count in range(n):
-    mn=int(input())
-    if mn>1 and mn<=12:
-        print(months[mn])
-    else:
-        print("INVALID")
+"""def printPattern(ch,n):
+    sp='.'
+    for i in range(0,n):
+        print(sp*(n-i-1)+ch*(2*i+1)+sp*(n-i-1))
+    return None
+inpCh=input()
+inpNum=int(input())
+printPattern(inpCh,inpNum)"""
+
+def printSeries(n):
+    for i in range(1,n+1):
+        num=1
+        print()
+        for j in range(i):
+            print(num,end=' ')
+            num+=1
+    return None
+inpNum = int(input())
+printSeries(inpNum)

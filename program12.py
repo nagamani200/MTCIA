@@ -1,11 +1,19 @@
-
-def printpattern(g,n):
-    assert(n>=0),'INVALID'
-    for i in range(n+1):
-        print(g*i)
-g=input()
-n=int(input())
-try:
-    printpattern(g,n)
-except AssertionError as a:
-    print(a)
+class Dog:
+    price=400
+    def __init__(self,name,color):  #instance attributes
+       self.color=color
+       self.name=name
+    def bark(self):
+        print("woof")
+        print(self.name, "has " ,self.price,
+              "price and its color is ",  self.color)
+   
+if __name__ =='__main__':
+    pet1=Dog("Tommy","brown")
+    pet2=Dog("Sheru","white")
+    pet1.bark()
+    pet2.bark()
+    print(pet1.price)
+    print(pet2.price)
+    print(Dog.price)
+    Dog('abc','blue').bark()

@@ -1,15 +1,4 @@
-sample_dict = {
-    "name": "Gowthu",
-    "age" : 22,
-    "salary":50000,
-    "city":"new york"
-}
-keys = ["name", "salary"]
+set1 ={10,20,30,40,50}
+set2 ={30,40,50,60,70}
 
-
-for k in keys:
-    sample_dict.pop(k)
-print(sample_dict)
-
-
-
+print(set1.symmetric_difference(set2))

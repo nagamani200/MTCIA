@@ -1,9 +1,5 @@
-sample_dict = {
-    "name": "Gaanu",
-    "age" : 22,
-    "salary":50000,
-    "city":"new york"
-}
+set1 ={10,20,30,40,50}
+set2 ={30,40,50,60,70}
 
-sample_dict['location'] = sample_dict.pop('city')
-print(sample_dict)
+set1.symmetric_difference_update(set2)
+print(set1)
