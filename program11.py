@@ -1,16 +1,18 @@
-class Cat:
-    def __init__(self,color,legs):  #instance attributes
-       self.color=color
-       self.legs=legs
-    def __str__(self):
-        temp="cat is"+self.color +' color ' +'and has'+str(self.legs)+ 'legs'
-        return temp
-if __name__ =="__main__":
-    pet1=Cat(" ginger ",4)
-    print(pet1.legs)
-    print(pet1.color)
-    print(pet1)
-    pet2=Cat(" brown ",3)
-    print(pet2.color)
-    print(pet2.legs)
-    print(pet2)
+class Complex():
+      def __init__(self,real,img):
+             self.real=real
+             self.img=img
+      def __mul__(self,ob):
+             temp=(self.real*ob.real-self.img*ob.img,
+                   self.real*ob.img+self.img*ob.real)
+                 
+             return temp
+      def __str__(self):
+             return(self.real,self.img)
+ob1=Complex(3,5)
+ob2=Complex(2,1)
+##ob3=ob1.add(obj2)
+ob3=ob1*ob2
+print(ob3)
+##print(ob3.img)
+##print(ob3.real)

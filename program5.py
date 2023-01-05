@@ -1,4 +1,18 @@
-set1 ={10,20,30}
-set2 ={20,40,50}
-print(set1.difference_update(set2))
-print(set1)
+class A:
+    def first_method(self):
+        print("Method of class A ...")
+
+class B(A):
+    def second_method(self):
+        print("Method of  class B ...")
+class C(B):
+    def third_method(self):
+        print("Method of class C ...")
+
+
+if __name__ == '__main__':
+    ob=C()
+    ob.first_method()
+    ob.second_method()
+    ob.third_method()
+    

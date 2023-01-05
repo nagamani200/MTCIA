@@ -1,4 +1,19 @@
-set1 ={10,20,30,40,50}
+##inheritance from more than one base class
+class A:
+    def first_method(self):
+        print("Method of class A ...")
 
-set1.difference_update({10,20,30,35})
-print(set1)
+class B:
+    def second_method(self):
+        print("Method of  class B ...")
+class C(A,B):
+    def third_method(self):
+        print("Method of class C ...")
+
+
+if __name__ == '__main__':
+    ob=C()
+    ob.first_method()
+    ob.second_method()
+    ob.third_method()
+    

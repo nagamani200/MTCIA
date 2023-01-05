@@ -1,22 +1,22 @@
-class Student:
-    college='MTICA'
-    course= 'MCA'
-    def __init__(self,name,rollno):
+class Employee:
+    empCount=0
+    def __init__(self,name,salary):
         self.name=name
-        self.rollno=rollno
-  
-        
-    def displayStudent(self):
-        print('Name : '+self.name.title()+'\nRollno : '+str(self.rollno))
-        print('College : '+self.college+'\nCourse : '+self.course)
-lstObj=[]
-for i in range(2):
-    n=input()
-    r=int(input())
-    temp='obj'+str(i)
-    temp=Student(n,r)
-    lstObj.append(temp)
-for i in lstObj:
-
-    
-    i.displayStudent()
+        self.salary=salary
+        Employee.empCount +=1
+    def displayCount(self):
+        print("Total Employee %d" %Employee.empCount)
+    def displayEmployee(self):
+        print("Name :",self.name,",Salary:", self.salary)
+emp1=Employee("naga",9999)
+emp1.displayEmployee()
+print ("is salary an attribute:",hasattr(emp1,'salary'))
+print(getattr(emp1,'salary'))
+setattr(emp1, 'salary',7000)
+print("modified salary",getattr(emp1,'salary'))
+print(hasattr(emp1, 'desg'))
+setattr(emp1, 'desg', 'manager')
+print (hasattr(emp1, 'desg'))
+print ("Added Attribute",getattr(emp1, 'desg'))
+delattr(emp1, 'salary')
+print ("is salary an attribute:",hasattr(emp1, 'salary'))

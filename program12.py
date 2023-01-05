@@ -1,19 +1,22 @@
-class Dog:
-    price=400
-    def __init__(self,name,color):  #instance attributes
-       self.color=color
-       self.name=name
-    def bark(self):
-        print("woof")
-        print(self.name, "has " ,self.price,
-              "price and its color is ",  self.color)
-   
-if __name__ =='__main__':
-    pet1=Dog("Tommy","brown")
-    pet2=Dog("Sheru","white")
-    pet1.bark()
-    pet2.bark()
-    print(pet1.price)
-    print(pet2.price)
-    print(Dog.price)
-    Dog('abc','blue').bark()
+class Employee:
+    empCount=0
+    def __init__(self,name,salary):
+        self.name=name
+        self.salary=salary
+        Employee.empCount +=1
+    def displayCount(self):
+        print("Total Employee :", Employee.empCount)
+    def displayEmployee(self):
+        print("Name :", self.name,", Salary:",self.salary)
+emp1=Employee("Gaanavi",55000)
+print("Total Employee",Employee.empCount)
+
+emp2=Employee("Gaanq",54000)
+emp1.displayEmployee()
+emp2.displayEmployee()
+print ("Total Employee {0}" .format(Employee.empCount))
+emp3=Employee("manu Gupta",55500)
+emp3.displayCount()
+emp2.displayCount()
+emp1.displayCount()
+print ("Total Employee {0}" .format(Employee.empCount))

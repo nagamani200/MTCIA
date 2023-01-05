@@ -1,7 +1,16 @@
-set1 ={10,20,30}
-set2 ={20,40,50}
-if set1.isdisjoint(set2):
-    print("Two sets have no items in common")
-else:
-    print("Two sets have items in common")
-    print(set1.intersection(set2))
+##super refers to the parent class
+class A:
+    def first_method(self):
+        print("Method of class A...")
+
+
+class B(A):
+     def first_method(self):
+         print("Method of class B...")    
+         super().first_method()
+
+
+
+ob=B()
+
+ob.first_method()

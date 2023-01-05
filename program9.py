@@ -1,5 +1,16 @@
-set1 ={10,20,30,40,50}
-set2 ={30,40,50,60,70}
-
-set1.symmetric_difference_update(set2)
-print(set1)
+class Vector2D:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def __add__(self,ob):
+        return Vector2D(self.x+ob.x,self.y+ob.y)
+    def __sub__(self,other):
+         return Vector2D(self.x-other.x,self.y-other.y)
+first=Vector2D(5,7)
+second=Vector2D(3,8)
+result=first+second
+print(result.x)
+print(result.y)
+result=first-second
+print(result.x)
+print(result.y)

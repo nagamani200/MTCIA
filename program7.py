@@ -1,4 +1,19 @@
-set1 ={10,20,30,40,50}
-set2 ={30,40,50,60,70}
+##indirect inheritance or multilevel inheritance.
+class A:
+    def first_method(self):
+        print("Method of class A ...")
 
-print(set1.symmetric_difference(set2))
+class B:
+    def first_method(self):
+        print("Method of  class B ...")
+class C(B,A):
+    def third_method(self):
+        print("Method of class C ...")
+
+
+if __name__ == '__main__':
+    ob=C()
+    ob.first_method()
+##   3 ob.second_method()
+    ob.third_method()
+    
